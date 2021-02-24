@@ -7,18 +7,20 @@
 var cognomeUtente = prompt("Inserisci il tuo cognome");
 //lista cognomi ARRAY
 var cognomi = ["Bianchi","Rossi","Verdi","Duzioni","Balsano"];
-//while (cognomeUtente.length <= 0) {
-    //var cognomeUtente = prompt ("Inserisci cognome");
-//}
+
+//usato ciclo "while" ripete all'utente che non deve lasciare il campo vuoto
+while (cognomeUtente.length <= 0) {
+    var cognomeUtente = prompt ("Inserisci cognome");
+}
 cognomi.push(cognomeUtente);
 cognomi.sort();       //.sort() ordina alfabeticamente un array
 console.log(cognomi);
 
-//stampo la lista ordinata alfabeticamente
+//stampo la lista ordinata alfabeticamente ciclo "for"
 for (var i = 0; i < cognomi.length; i++) {
     document.getElementById("lista-cognomi").innerHTML += "<li>" + cognomi[i] + "</li>";
 }
 
 //scrivo la posizione del cognome nella lista
 var posizioneCognome = (cognomi.indexOf(cognomeUtente) + 1);
-document.getElementById("posizione-lista").innerHTML = "Complimenti, ti trovi alla posizione numero " + posizioneCognome;
+document.getElementById("posizione-lista").innerHTML = "Benvenuto, ti trovi alla posizione numero " + posizioneCognome;
