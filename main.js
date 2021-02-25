@@ -5,6 +5,7 @@
 
 //chiedere cognome utente
 var cognomeUtente = prompt("Inserisci il tuo cognome");
+cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(1);  //".charAt" + ".toUpperCase" + ".slice" prima lettera in maiuscolo
 //lista cognomi ARRAY
 var cognomi = ["Bianchi","Rossi","Verdi","Duzioni","Balsano"];
 
